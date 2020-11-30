@@ -1,41 +1,21 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="white"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="./assets/logou.svg"
-          transition="scale-transition"
-          width="150"
-        />
-
-        
-      </div>
-
-      <v-spacer></v-spacer>
-
-    </v-app-bar>
+    <Navbar></Navbar>
 
     <v-main>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Navbar from '@/components/Nabvar';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Navbar,
   },
 
   data: () => ({
